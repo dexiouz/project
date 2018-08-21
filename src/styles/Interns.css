@@ -1,0 +1,20 @@
+.interns{
+	/* margin-bottom: 100px; */
+	display: flex;
+	width:90%;
+	/* margin: 0 auto; */
+	justify-content: center;
+	flex-direction: column;
+	/* position: absolute; */
+	/* top: 400px; */
+	background-color: #000
+}
+
+.internPictures{
+	display: flex;
+	margin-top: 10px;
+	align-items: center;
+	width: 100%;
+	justify-content: space-between;
+	flex-flow: row wrap
+}

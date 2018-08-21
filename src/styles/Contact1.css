@@ -1,0 +1,71 @@
+div,body,section{
+    display: block;
+}
+#main{
+    display: flex;
+   background-color:rgba(0, 0, 0, 0.65);
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 80%;
+    height: 333px;
+    padding: 20px;
+    /*
+     margin: 0 auto;
+    margin-top: 70px;
+*/
+}
+
+#head{
+    color: white;
+    font-family: monospace;
+}
+#rightdiv p{
+    font-family: serif;
+}
+#leftdiv{
+    width: 80%;
+    height: auto;
+}
+
+#rightdiv{
+    width: 20%;
+  height: 300px;
+}
+
+#message{
+    padding: 2em;
+}
+#mess{
+    color: white;
+}
+
+input{
+    width: 75%;
+}
+input[type="submit"]{
+  color:white;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+textarea{
+    width: 67%;
+}
+#fb{
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+button{
+    width: 10%;
+     
+}
+.in{
+    width: 5em;
+}
+
+#dip{
+     color: white;
+}
+label{
+     color: white;
+}
