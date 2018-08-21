@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../styles/Details.css'
 export default class Body extends Component {
   render() {
@@ -11,7 +11,7 @@ export default class Body extends Component {
           
           </div>      
           <div className="outer">
-           <input type="button" name="" value='person name' />
+          <NavLink to='./Profiles' > <input type="button" name="" value='person name' /></NavLink>
           </div>   
         
         </div>

@@ -1,18 +1,11 @@
 
 
-.main-body{
-	width:100%;
-	height: 81.3vh;
-	flex-direction: column;
-	/* background-color: white; */
-}
-
 .body-container{
-    width:500px;
+    width:inherit;
     height: 250px;
-    background: transparent;
+    /* background: rgb(170, 216, 170); */
     color: #fff;
-    left:30%;
+    left:50%;
     top:50%;
     position: absolute;
     box-sizing: border-box;
@@ -30,6 +23,19 @@
 	-3px -3px 1px white;
 	border-radius: 10px; */
 	
+}
+
+.body h1{
+	font-weight: bold;
+	font-size: 50px;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.body h3{
+	margin-left: 190px;
+	/* font-weight: bold; */
+	font-size: 20px;
+	font-family: cursive
 }
 .p{
 	font-size: 15px;
@@ -51,14 +57,16 @@
 .body-container input[type='submit']{
 	border: none;
 	outline: none;
-	height: 40px;
+	height: 80px;
 	background: #fb2535;
+	/* background: green; */
 	color: #fff;
-	font-size: 18px;
+	font-size: 20px;
 	border-radius: 10px;
-	width: 100%;
+	width: 40%;
 	position: relative;
-    bottom: -px;
+		bottom: -px;
+		margin-left: 390px;
 }
 
 .body-container input[type='submit']:hover{

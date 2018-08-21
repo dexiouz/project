@@ -10,7 +10,7 @@ export default class Header extends Component {
             <li><a href="">Home</a></li>
             <li><a href="">What we do</a></li>
             <li><a href="">Contact us</a></li>
-            <li><a href="">FAQ</a></li>
+            <li><a href="">Login</a></li>
           </ul>
         </nav>
 

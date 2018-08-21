@@ -4,7 +4,7 @@ import '../styles/Signup.css';
 import { NavLink } from 'react-router-dom';
 class Signup extends React.Component {
 	state={
-
+		
 	}
 
 	signup = (e) =>{
@@ -20,12 +20,12 @@ class Signup extends React.Component {
 		}else if(comfirmpassword !== password){
 			alert('passwords do not match')
 		}else{
-			window.location.href = '/App';
+			window.location.href = '/Login';
 			
-		}
+		 }
 	}
 
-	handleChange=(target)=>{
+	handleChange=({target})=>{
 		let {value, name} = target
 		this.setState({[name]:value})
 	}
@@ -37,18 +37,18 @@ class Signup extends React.Component {
 				<Header />
 				<div className='signup'>
 					<h1>Signup Here</h1>
-					<form action="" onChange={this.handleChange}>
+					<form action=""  onSubmit={this.signup} onChange={this.handleChange}>
 
 
-						<input type="text" name="username" placeholder="Username" />
+						<input type="text" name="username" placeholder="Company Name" />
 
-						<input type="text" name="email" placeholder="email" />
+						<input type="text" name="email" placeholder="Company email" />
 
-						<input type="password" name="password" placeholder="Password" />
+						<input type="password" name="password" placeholder="Company Password" />
 
 						<input type="password" name="comfirmpassword" placeholder="Comfirm Password" />
 						
-						 <input type="submit" name="" value="Sign up" onClick={this.signup} />
+						 <input type="submit" name="" value="Sign up" />
 						<a href="#">Already Registered? Login here</a>
 
 					</form>

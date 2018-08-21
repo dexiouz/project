@@ -15,7 +15,7 @@ class Login extends React.Component {
 			}else if(password === '' || !password){
 				 alert('enter valid password')
 			}else{
-				window.location.href = '/App';
+				window.location.href = '/Profiles';
 				 alert('Welcome')
 			}
 	

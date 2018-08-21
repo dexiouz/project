@@ -6,10 +6,11 @@
 	justify-content: flex-start;
 	width: 100%;
 	height: 90px;
+	/* background-color:green; */
 	/* padding: 10px; */
 	/* background-color: rgba(0,0,0,0.7); */
 	background-color: transparent;
-	border-bottom: 0.1px solid whitesmoke;
+	/* border-bottom: 0.1px solid whitesmoke; */
 }
 
 #searchInput{

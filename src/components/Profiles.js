@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import '../styles/Profiles.css';
 import Header from './Header';
 import Body from './Body';
-import '../styles/Login.css';
+// import '../styles/Login.css';
 import { NavLink } from 'react-router-dom';
 class Profiles extends React.Component {
   render() {
     return (
       <div className='container'>
-
-          {/* <Header  /> */}
+        <Header  />
         <div className="top">
-        
+      
           <div className='cover'>
             <div className='InnerCover'>
               <div className="firstDiv">
@@ -28,10 +27,6 @@ class Profiles extends React.Component {
 
                 </div>
               </div>
-
-
-
-
 
 
               <div className="secondDiv">
@@ -70,12 +65,6 @@ class Profiles extends React.Component {
           </div>
         </div>
       </div>
-
-
-
-
-
-
     )
   }
 }

@@ -13,9 +13,9 @@ const AppRouter = () => [
     <div>
       <Switch>
 
-        <Route path ='/' component ={Login} exact ={true}/>
-        <Route path ='Login' component ={Login} exact ={true}/>
-        <Route path ='/App' component ={App}/>
+        <Route path ='/' component ={App} exact ={true}/>
+        <Route path ='App' component ={App} exact ={true}/>
+        <Route path ='/Login' component ={Login}/>
         <Route path ='/Signup' component ={Signup}/> 
         <Route path ='/Profiles' component ={Profiles}/> 
         <Route path ='/Details' component ={Details}/> 
