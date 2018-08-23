@@ -11,7 +11,7 @@ class Profiles extends React.Component {
     return (<div>
       
       <div className='container'>
-      <Header1 />
+      {/* <Header1 /> */}
 
       <CompanyHeader/>
         <div className="top">

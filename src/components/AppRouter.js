@@ -4,13 +4,16 @@ import App from './App';
 import Login from './Login';
 import Profiles from './Profiles'
 import Signup from './Signup';
-import Details from './CompanyHeader'
+import Details from './CompanyHeader';
+import Header from './Header'
 // import '../styles/Signup.css';
 // import '../styles/App.css';
 // import '../styles/Login.css';
 const AppRouter = () => [
   <BrowserRouter>
+  
     <div>
+    <Header />
       <Switch>
 
         <Route path ='/' component ={App} exact ={true}/>

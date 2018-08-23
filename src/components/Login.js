@@ -30,7 +30,7 @@ class Login extends React.Component {
 		return (
 			<div className='container'>
 				<div className="top">
-					<Header />
+					{/* <Header /> */}
 					<div className='loginbox'>
 						<h1>Login Here</h1>
 						<form action="" onChange={this.handleChange}>

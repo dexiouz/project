@@ -8,7 +8,7 @@ class App extends React.Component{
     return(
       <div  className='container'>
         <div className="top">
-         <Header />
+         {/* <Header /> */}
          <Body />
          
         </div>

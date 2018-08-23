@@ -34,7 +34,7 @@ class Signup extends React.Component {
 		return (
 			<div className='container'>
 				<div className="top">
-				<Header />
+				{/* <Header /> */}
 				<div className='signup'>
 					<h1>Signup Here</h1>
 					<form action=""  onSubmit={this.signup} onChange={this.handleChange}>
