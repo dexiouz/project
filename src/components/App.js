@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
+import React, {Component} from'react';
 import Header from './Header';
 import Body from './Body';
-import Details from './Details'
 import '../styles/App.css';
 import Profiles from './Profiles'
 class App extends React.Component{
@@ -13,7 +12,6 @@ class App extends React.Component{
          <Body />
          
         </div>
-        <Details />
       </div>
     )
   }

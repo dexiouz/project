@@ -49,7 +49,7 @@ class Signup extends React.Component {
 						<input type="password" name="comfirmpassword" placeholder="Comfirm Password" />
 						
 						 <input type="submit" name="" value="Sign up" />
-						<a href="#">Already Registered? Login here</a>
+					<NavLink to='./Login' ><a href="#">Already Registered? Login here</a>	</NavLink>
 
 					</form>
 				</div>

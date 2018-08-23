@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import '../styles/Login.css';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from'react-router-dom';
 class Login extends React.Component {
 	state={
 
@@ -44,7 +44,8 @@ class Login extends React.Component {
 
 							{/* <NavLink to='./Signup' > <input type="submit" name="" value="Login" /> </NavLink> */}
 							<a href="#">Lost your password?</a><br />
-							<a href="#">Don't have an accout?</a>
+							
+							<NavLink to='./Signup' ><a href="#">Don't have an accout?</a></NavLink>
 						</form>
 					</div>
 

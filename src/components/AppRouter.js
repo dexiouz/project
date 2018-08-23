@@ -4,7 +4,7 @@ import App from './App';
 import Login from './Login';
 import Profiles from './Profiles'
 import Signup from './Signup';
-import Details from './Details'
+import Details from './CompanyHeader'
 // import '../styles/Signup.css';
 // import '../styles/App.css';
 // import '../styles/Login.css';
