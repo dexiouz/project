@@ -10,7 +10,7 @@ export default class Body extends Component {
          <h1>Your Company's  Services Are Needed</h1>
          <h3>Get Notified Of Opportunities That Suit Your Company's Service Description</h3>
         </div>
-        <NavLink to='./Signup' ><input type="submit" name="" value="Register my company" /></NavLink>
+        <NavLink to='./CompanyDashBoard' ><input type="submit" name="" value="Register my company" /></NavLink>
       </div>
     )
   }

@@ -1,54 +1,78 @@
 import React, { Component } from 'react';
+import axios from 'axios'
 import Header from './Header';
 import '../styles/Signup.css';
 import { NavLink } from 'react-router-dom';
-class Signup extends React.Component {
-	state={
-		
-	}
+let uDatabase = [];
 
-	signup = (e) =>{
-		e.preventDefault();
-		let { username,email,password,comfirmpassword } = this.state;
-		if(username === '' || !username){
-			alert('Try valid username')
-		}else 
-		if(!email|| email === '' ||email.length < 1){
-			alert('input valid email')
-		}	else if(!password || password === '' ||password.length < 1){
-			alert('Use  strong password')
-		}else if(comfirmpassword !== password){
-			alert('passwords do not match')
-		}else{
-			window.location.href = '/Login';
-			
-		 }
+class Signup extends React.Component {
+	constructor(props){
+		super(props)
+		this.state={
+		
+		}
 	}
+getValues=(e)=>{
+	const 
+	username = document.getElementById('username').value,
+  email = document.getElementById('email').value,
+	password = document.getElementById('password').value,
+	comfirmpassword = document.getElementById('comfirmpassword').value;
+
+	return ({username, email, password, comfirmpassword})
+}
+
+signup=(e)=>{
+	e.preventDefault()
+	console.log('hi')
+	let {username, email, password, comfirmpassword}  = this.state
+	
+		!username ? alert('invalid name') 
+		:!email || email.length <1 ? alert('enter valid mail')
+		:!password || password === '' ||password.length < 1 ? alert('invalid password') 
+		:comfirmpassword !== password ? alert('passwords do not match')
+		:axios({
+			method: 'post',
+			url: 'http: localhost:5000/saveinfo',
+			data: {
+				username,
+				email,
+				password,
+			},
+		}). then(res => {
+			console.log(res)
+		})
+		// window.location.href = '/Login';
+		alert(username, email, password)
+		// alert(uDatabase)
+}
+
+
 
 	handleChange=({target})=>{
 		let {value, name} = target
 		this.setState({[name]:value})
 	}
 	render() {
-		let{username, password,comfirmpassword} = this.state
 		return (
 			<div className='container'>
 				<div className="top">
-				{/* <Header /> */}
 				<div className='signup'>
 					<h1>Signup Here</h1>
-					<form action=""  onSubmit={this.signup} onChange={this.handleChange}>
+					<form onChange={this.handleChange} >
 
+						<input type="text" id='username' name='username'  placeholder="Company Name"></input>
 
-						<input type="text" name="username" placeholder="Company Name" />
+						<input type="text" id="email" name="email" placeholder="Company email" />
 
-						<input type="text" name="email" placeholder="Company email" />
+						<input type="password" id="password" name="password" placeholder="Company Password"></input>
 
-						<input type="password" name="password" placeholder="Company Password" />
+						<input type="password" 	 id="comfirmpassword" 	 name="comfirmpassword" 	 placeholder="Comfirm 	 Password"></input>
 
-						<input type="password" name="comfirmpassword" placeholder="Comfirm Password" />
+						<input type="submit" name="" value="Login" onClick={this.signup} />
 						
-						 <input type="submit" name="" value="Sign up" />
+						 {/* <input type="button" name="" value="Sign up" onClick={this.signup}/> */}
+						 
 					<NavLink to='./Login' ><a href="#">Already Registered? Login here</a>	</NavLink>
 
 					</form>

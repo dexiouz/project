@@ -7,7 +7,6 @@ import { FaNodeJs } from 'react-icons/fa';
 import { FaCss3 } from 'react-icons/fa';
 import { FaPython } from 'react-icons/fa';
 import { FaReact } from 'react-icons/fa';
-
 import { FaHtml5 } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 import '../styles/CompanyHeader.css'
@@ -28,11 +27,6 @@ export default class CompanyHeader extends Component {
         <div className="secondInner">
           <h2 className='companyCategory'>Software Company</h2>
           <p>Core: <span>Training, Mobile Apps, Websites and Business Solutions</span></p>
-
-
-          <div className='techWtIcon'> <p>Technologies:</p><span className='techIcons'><FaJs/> <FaHtml5/> <FaCss3/> <FaReact/> <FaNodeJs/> <FaPython/></span></div>
-
-
           
           <p>Facts: <span> 250+ Projects Completed, 150+ Benefactors, 400+ Happy Clients </span></p>
           <p>Partners: <span>Re:LiFE, Hack Reactor, You Win, Microsoft BizSpark.</span></p>
@@ -50,6 +44,16 @@ We are Committed to Grooming Great Men with Character and Capacity! </span></p>
             <p><span>Brass Umungasi</span></p>
             <p><span contentEditable >4 staff members</span></p>
             <p><span>Branches</span></p>
+          </div>
+
+ <div className="connect">
+            <h6>Technologies</h6>
+            <div className='icons'><FaJs /></div>
+            <div className='icons'><FaHtml5/></div>
+            <div className='icons'><FaCss3 /></div>
+            <div className='icons'><FaPython/></div>
+            <div className='icons'><FaNodeJs/></div>
+            <div className='icons'><FaReact /></div>
           </div>
 
           <div className="connect">
