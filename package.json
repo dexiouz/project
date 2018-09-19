@@ -5,12 +5,15 @@
   "dependencies": {
     "antd": "^3.8.4",
     "axios": "^0.18.0",
+    "chart.js": "^2.7.2",
     "react": "^16.4.0",
+    "react-chartkick": "^0.3.0",
     "react-dom": "^16.4.0",
     "react-icons": "^3.0.5",
     "react-modal": "^3.5.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "1.1.4",
+    "recharts": "^1.2.0",
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.2"
   },

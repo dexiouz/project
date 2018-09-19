@@ -10,7 +10,8 @@ import Contact from './components/Contact'
 import 'semantic-ui-css/semantic.min.css';
 import registerServiceWorker from './registerServiceWorker';
 import AppRouter from './components/AppRouter';
-import Backend from './components/Backend'
+import Backend from './components/Backend';
+import Charts from './components/Charts'
 
-ReactDOM.render(<Backend/>, document.getElementById('root'));
+ReactDOM.render(<Charts />, document.getElementById('root'));
 registerServiceWorker();
