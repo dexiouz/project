@@ -1,17 +1,18 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
- 
+  /* border: 0.009px solid rgb(114, 116, 114); */
   width: 100%;
   /* height: 70vh */
 }
 
 .box {
   height: 100%;
+  /* flex: 1 0 auto; */
   flex: 1 0 50%;
   background: rgb(245, 249, 245);
   border-radius: 3px;
-  border: 0.02em solid gray;
+  border: 0.009px solid rgb(114, 116, 114);
 
 }
 .stock-out {

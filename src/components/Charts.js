@@ -1,8 +1,18 @@
 
 import React, { Component } from 'react';
+import '../styles/Charts.css'
+//import recharts
 import {PieChart, Pie,Cell, Legend, Tooltip,ResponsiveContainer, } from 'recharts';
 import {BarChart, Bar, XAxis, YAxis, CartesianGrid} from 'recharts';
-import '../styles/Charts.css'
+
+//import canvasCharts
+import CanvasJSReact from './canvasjs.react';
+const CanvasJS = CanvasJSReact.CanvasJS,
+     CanvasJSChart = CanvasJSReact.CanvasJSChart;
+
+
+
+
 
 // PieCHart
 //1st
@@ -37,7 +47,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
   const x  = cx + radius * Math.cos(-midAngle * RADIAN);
   const y = cy  + radius * Math.sin(-midAngle * RADIAN);
  
-  return (
+  return (     
     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} 	dominantBaseline="central">
     	{`${(percent * 100).toFixed(0)}%`}
     </text>
@@ -88,9 +98,37 @@ const barData1 = [
   {name: 'Dec', uv: 1890,  amt: 2181}
 ],
 barChartWidth=500,
-barChartHeight= 400;
+barChartHeight= 400,
+
+//canvascharts
+ options = {
+  animationEnabled: true,
+  exportEnabled: true,
+  color: 'gray',
+theme: "light2", // "light1", "dark1", "dark2"
+  // title:{
+  //   text: "Stock out"
+  // },
+  data: [{
+    type: "pie",
+    showInLegend: true,
+		legendText: "{label}",
+    indexLabel: "{label}: {y}pcs",
+    toolTipContent: "{label}: <strong>{y}%</strong>",		
+    startAngle: -90,
+    dataPoints: [
+      { y: 20, label: "Airfare" },
+      { y: 24, label: "Food & Drinks" },
+      { y: 20, label: "Accomodation" },
+      { y: 14, label: "Transportation" },
+      { y: 12, label: "Activities" },	
+    ]
+  }]
+};
+
 export default class Charts extends React.Component {
   render() {
+    
     return (
       <div className="wrapper">
       {/* BarchartChart */}
@@ -192,7 +230,10 @@ export default class Charts extends React.Component {
         {/* Piechart */}
         <div className="box staff-junior">
        <h1>Suppliers</h1>
-        <PieChart width={pieChartWidth} height={pieChartHeight} onMouseEnter={this.onPieEnter}>
+        <CanvasJSChart options = {options} 
+				
+			/> 
+        {/* <PieChart width={pieChartWidth} height={pieChartHeight} onMouseEnter={this.onPieEnter}>
         <Legend verticalAlign="top" height={-30} />
         <Pie
           
@@ -210,9 +251,10 @@ export default class Charts extends React.Component {
           
         </Pie>
         
-      </PieChart> 
+      </PieChart>  */}
+      
         </div>
-
+        
 
       </div>
       
