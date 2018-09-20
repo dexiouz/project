@@ -1,35 +1,20 @@
 
 import React, { Component } from 'react';
 import {PieChart, Pie,Cell, Legend, Tooltip,ResponsiveContainer, } from 'recharts';
-import {BarChart, Bar, XAxis, YAxis, CartesianGrid} from 'recharts';
+import {BarChart, Bar, XAxis, YAxis, CartesianGrid,} from 'recharts'
 import '../styles/Charts.css'
 
 // PieCHart
-//1st
-const 
- pieDatas = [
-  {name: 'Available', value: 800*100}, 
-  {name: 'Spoilt', value: 600*100}],               
+const pieDatas = [{name: 'Available', value: 800*100}, {name: 'Spoilt', value: 600*100}],
+                  
+                 
 //2nd
- pieData2 = [{name: 'LG Television', value: 800}, 
-  {name: 'Eva wine', value: 600},
-  {name: 'Dell laptop', value: 400}, 
-  {name: 'Ice cream', value: 500},   
-  {name: 'Beverages', value: 700}
-],
+ pieData2 = [{name: 'LG Television', value: 800}, {name: 'Eva wine', value: 600},
+                  {name: 'Dell laptop', value: 400}, {name: 'Ice cream', value: 500}, {name: 'Beverages', value: 700}],
 //3rd
- pieData3 = [
-   {name: 'Supplier Chibuike', value: 800}, 
-   {name: 'Supplier Chidera', value: 600},
-   {name: 'Supplier George', value: 400}, 
-   {name: 'Supplier Ezekiel', value: 700}
-  ],
-COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF00FF','#800080'],
-
-pieChartWidth=400,
-pieChartHeight=400;
-
-
+ pieData3 = [{name: 'Supplier Chibuike', value: 800}, {name: 'Supplier Chidera', value: 600},
+                  {name: 'Supplier George', value: 400}, {name: 'Supplier Ezekiel', value: 700}],
+                  COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#FF00FF','#800080'];
 
 const RADIAN = Math.PI / 180;                    
 const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent, index }) => {
@@ -39,7 +24,7 @@ const renderCustomizedLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, per
  
   return (
     <text x={x} y={y} fill="white" textAnchor={x > cx ? 'start' : 'end'} 	dominantBaseline="central">
-    	{`${(percent * 100).toFixed(0)}%`}
+    	{`${(percent * 100).toFixed(0)}pcs`}
     </text>
   );
 };
@@ -51,10 +36,10 @@ const barData1 = [
   {name: 'Mar', uv: 2000,  amt: 2290},
   {name: 'Apr', uv: 2780,  amt: 2000},
   {name: 'May', uv: 1890,  amt: 2181},
-  {name: 'Jun', uv: 2390,  amt: 2500},
-  {name: 'Jul', uv: 3490,  amt: 2100},
+  {name: 'June', uv: 2390,  amt: 2500},
+  {name: 'July', uv: 3490,  amt: 2100},
   {name: 'Aug', uv: 4000, amt: 2400},
-  {name: 'Sep', uv: 3000 , amt: 2210},
+  {name: 'Sept', uv: 3000 , amt: 2210},
   {name: 'Oct', uv: 2000,  amt: 2290},
   {name: 'Nov', uv: 2780,  amt: 2000},
   {name: 'Dec', uv: 1890,  amt: 2181}
@@ -65,10 +50,10 @@ const barData1 = [
   {name: 'Mar', uv: 2000,  amt: 2290},
   {name: 'Apr', uv: 2780,  amt: 2000},
   {name: 'May', uv: 1890,  amt: 2181},
-  {name: 'Jun', uv: 2390,  amt: 2500},
-  {name: 'Jul', uv: 3490,  amt: 2100},
+  {name: 'June', uv: 2390,  amt: 2500},
+  {name: 'July', uv: 3490,  amt: 2100},
   {name: 'Aug', uv: 4000, amt: 2400},
-  {name: 'Sep', uv: 3000 , amt: 2210},
+  {name: 'Sept', uv: 3000 , amt: 2210},
   {name: 'Oct', uv: 2000,  amt: 2290},
   {name: 'Nov', uv: 2780,  amt: 2000},
   {name: 'Dec', uv: 1890,  amt: 2181}
@@ -79,16 +64,16 @@ const barData1 = [
   {name: 'Mar', uv: 2000,  amt: 2290},
   {name: 'Apr', uv: 2780,  amt: 2000},
   {name: 'May', uv: 1890,  amt: 2181},
-  {name: 'Jun', uv: 2390,  amt: 2500},
-  {name: 'Jul', uv: 3490,  amt: 2100},
+  {name: 'June', uv: 2390,  amt: 2500},
+  {name: 'July', uv: 3490,  amt: 2100},
   {name: 'Aug', uv: 4000, amt: 2400},
-  {name: 'Sep', uv: 3000 , amt: 2210},
+  {name: 'Sept', uv: 3000 , amt: 2210},
   {name: 'Oct', uv: 2000,  amt: 2290},
   {name: 'Nov', uv: 2780,  amt: 2000},
   {name: 'Dec', uv: 1890,  amt: 2181}
 ],
-barChartWidth=500,
-barChartHeight= 400;
+width=600,
+height= 400;
 export default class Charts extends React.Component {
   render() {
     return (
@@ -96,16 +81,13 @@ export default class Charts extends React.Component {
       {/* BarchartChart */}
         <div className="box stock-out">
         <h1>Stock Out</h1>
-          <BarChart 
-            width={barChartWidth} 
-            height={barChartHeight} 
-            data={barData1}
+          <BarChart width={width} height={height} data={barData1}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-            {/* <CartesianGrid strokeDasharray="3 3" /> */}
+            <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Legend verticalAlign="top" height={30} />
+            <Legend />
             {/* <Bar dataKey="pv" fill="#8884d8" /> */}
             <Bar dataKey="uv" fill="#82ca9d" />
           </BarChart>
@@ -114,7 +96,7 @@ export default class Charts extends React.Component {
         {/* PieChart */}
         <div className="box stock-in">
         <h1>Stock In</h1>
-        <PieChart width={pieChartWidth} height={pieChartHeight} onMouseEnter={this.onPieEnter}>
+        <PieChart width={400} height={400} onMouseEnter={this.onPieEnter}>
         <Legend verticalAlign="top" height={-30} />
         <Pie
           
@@ -139,14 +121,14 @@ export default class Charts extends React.Component {
         {/* Barchart */}
         <div className="box products-out">
         <h1>Products Out</h1>
-        <BarChart width={barChartWidth} height={barChartHeight} data={barData2}
+        <BarChart width={width} height={height} data={barData2}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-            {/* <CartesianGrid strokeDasharray="3 3" /> */}
+            <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Legend verticalAlign="top" height={30} />
-            {/* <Bar dataKey="pv" fill="#8884d8" /> */}
+            <Legend />
+            <Bar dataKey="pv" fill="#8884d8" />
             <Bar dataKey="uv" fill="#82ca9d" />
           </BarChart>
         </div>
@@ -154,7 +136,7 @@ export default class Charts extends React.Component {
         {/* Piechart */}
         <div className="box products-in">
         <h1>Products In</h1>
-        <PieChart width={pieChartWidth} height={pieChartHeight} onMouseEnter={this.onPieEnter}>
+        <PieChart width={400} height={400} onMouseEnter={this.onPieEnter}>
         <Legend verticalAlign="top" height={-30} />
         <Pie
           
@@ -177,14 +159,14 @@ export default class Charts extends React.Component {
           {/* BArchart */}
         <div className="box staff-senior">
         <h1>Sales</h1>
-        <BarChart width={barChartWidth} height={barChartHeight} data={barData3}
+        <BarChart width={width} height={height} data={barData3}
             margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-            {/* <CartesianGrid strokeDasharray="3 3" /> */}
+            <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Legend verticalAlign="top" height={30} />
-            {/* <Bar dataKey="pv" fill="#8884d8" /> */}
+            <Legend />
+            <Bar dataKey="pv" fill="#8884d8" />
             <Bar dataKey="uv" fill="#82ca9d" />
           </BarChart>
         </div>
@@ -192,7 +174,7 @@ export default class Charts extends React.Component {
         {/* Piechart */}
         <div className="box staff-junior">
        <h1>Suppliers</h1>
-        <PieChart width={pieChartWidth} height={pieChartHeight} onMouseEnter={this.onPieEnter}>
+        <PieChart width={400} height={400} onMouseEnter={this.onPieEnter}>
         <Legend verticalAlign="top" height={-30} />
         <Pie
           

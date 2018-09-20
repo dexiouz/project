@@ -1,0 +1,54 @@
+.ant-form-item-label {
+  text-align: left !important;
+  width: 15% !important
+}
+
+.main-container {
+  padding-left: 4em !important;
+  padding-right: 4em !important
+}
+
+.details-label {
+  font-weight: bold
+}
+
+.list-details {
+  padding-bottom: 20px;
+  padding-left: 20px
+}
+
+.details-header {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1)
+}
+
+.white-background {
+  background-color: white
+}
+
+.textAreaInput {
+  border: 1px solid #d9d9d9;
+  width: 100%;
+  margin-left: 30px;
+  border-radius: 4px;
+}
+
+.textAreaInput:hover {
+  border-color: #40a9ff;
+  border-width: 1px !important
+}
+
+.zero-margin { 
+  margin-left: 0px !important
+}
+
+.ant-input {
+  /* margin-left: 30px !important */
+}
+
+.input-alignment {
+  margin-left: 30px !important
+}
+

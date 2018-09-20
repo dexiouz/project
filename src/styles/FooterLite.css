@@ -1,0 +1,18 @@
+.footer-lite{
+  background: #444b6e;
+  color: #444;
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid #e8e8e8;
+  font-size: 14px;
+}
+
+
+.footer-lite-social{
+  padding: 20px;
+}
+
+.footer-lite-social i{
+  padding-left: 10px;
+  font-size: 25px;
+}
