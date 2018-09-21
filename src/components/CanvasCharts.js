@@ -157,3 +157,6 @@ export default class CanvasCharts extends React.Component {
     )
   }
 }
+
+
+

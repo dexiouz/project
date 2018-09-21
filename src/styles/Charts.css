@@ -12,8 +12,13 @@
   flex: 1 0 50%;
   background: rgb(245, 249, 245);
   border-radius: 3px;
-  border: 0.009px solid rgb(114, 116, 114);
+  border: 0.009em solid rgb(114, 116, 114);
 
+}
+.wrapper h1 {
+  color: gray;
+  /* margin-left: 0.5em; */
+  padding: 0 10px;
 }
 .stock-out {
   /* background:white */
@@ -37,4 +42,8 @@
 
 .staff-junior {
   /* background: rgb(165, 42, 161) */
+}
+
+.trial {
+
 }

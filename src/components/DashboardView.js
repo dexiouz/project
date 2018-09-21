@@ -14,7 +14,7 @@ class DashboardView extends Component {
           <Breadcrumb.Item>Store</Breadcrumb.Item>
           <Breadcrumb.Item>Dashboard</Breadcrumb.Item>
         </Breadcrumb>
-        <div style={{ marginLeft: '40px', background: '#fff', minHeight: '100vh', boxShadow: '0px 2px 20px 3px #b6b6b6', borderRadius: 5, padding: '1.5em', marginLeft: 60 }}>
+        <div style={{ marginLeft: '40px', background: '#fff', minHeight: '100vh', boxShadow: '0px 2pyarx 20px 3px #b6b6b6', borderRadius: 5, padding: '1.5em', marginLeft: 60 }}>
         <Charts />
         {/* <CanvasCharts /> */}
           <Row type="flex" justify="space-around">
