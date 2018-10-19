@@ -11,7 +11,7 @@ import 'semantic-ui-css/semantic.min.css';
 import registerServiceWorker from './registerServiceWorker';
 import AppRouter from './components/AppRouter';
 import Backend from './components/Backend';
-import Charts from './components/Charts'
-
-ReactDOM.render(<Charts />, document.getElementById('root'));
+import Charts from './components/Charts';
+import Practice from './components/Practice'
+ReactDOM.render(<Practice />, document.getElementById('root'));
 registerServiceWorker();

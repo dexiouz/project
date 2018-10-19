@@ -1,9 +1,7 @@
 .wrapper {
   display: flex;
   flex-wrap: wrap;
-  /* border: 0.009px solid rgb(114, 116, 114); */
   width: 100%;
-  /* height: 70vh */
 }
 
 .box {
@@ -20,7 +18,7 @@
   /* margin-left: 0.5em; */
   padding: 0 10px;
 }
-.stock-out {
+.Stock-Available {
   /* background:white */
 }
 
@@ -28,22 +26,18 @@
   /* background: blue */
 }
 
-.products-out {
+.Products-Available {
   /* background: red */
 }
 
-.products-in {
+.Available-Products-percentage {
   /* backgrounrgb(14, 31, 34)65) */
 }
 
-.staff-senior {
+.sales {
   /* background: rgb(142, 165, 42) */
 }
 
-.staff-junior {
+.Suppliers {
   /* background: rgb(165, 42, 161) */
-}
-
-.trial {
-
 }

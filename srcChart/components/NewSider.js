@@ -12,6 +12,7 @@ import ProductDetails from "./ProductDetails.js";
 import { Route, Link } from "react-router-dom";
 import SalesOrder from './SalesOrder';
 import PurchaseOrder from './PurchaseOrder';
+import CreateProductListForm from './CreateProductListForm'
 
 
 const { Content, Sider } = Layout;
@@ -75,7 +76,7 @@ export default class NewSider extends Component{
         title={<span><Icon type="profile" /><span>Products</span></span>}
       >
         <Menu.Item key="setting:65"><Icon type="ordered-list" />List<Link to="products"/></Menu.Item>
-        <Menu.Item key="setting:76"><Icon type="plus" />Create<Link to="create_product"/></Menu.Item>
+        <Menu.Item key="setting:76"><Icon type="plus" />Create<Link to="CreateProductListForm"/></Menu.Item>
       </SubMenu>
         {/* <Menu.Item key="Sales" disabled={disabled}>
           <Icon type="shopping-cart" />
@@ -161,6 +162,10 @@ export default class NewSider extends Component{
         <Route exact path="/categories" component={Categories} />
         <Route exact path="/create_category" component={CreateCategory} />
         <Route exact path="/create_product" component={CreateProduct} />
+
+
+        <Route exact path="/createProductListForm" component={CreateProductListForm} />
+
         <Route exact path="/products" component={Products} />
         <Route exact path="/view_product" component={ProductDetails} />
         <Route exact path="/view_sales" component={SalesOrder} />
